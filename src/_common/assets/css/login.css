@@ -21,3 +21,11 @@
 .btn:hover{
     background-color: #6B6E70 !important;
 }
+.redirect{
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+}

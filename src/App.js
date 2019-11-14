@@ -5,6 +5,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/home';
+import Register from './components/register';
 import Banner from './components/banner';
 import Projects from './components/projects';
 import Blog from './components/blog';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/blog" component={Blog} />
             <Route path="/about" component={About} />
             <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
           </Switch>
         </div>
       </BrowserRouter>

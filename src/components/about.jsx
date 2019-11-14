@@ -18,7 +18,7 @@ export default class About extends Component {
             <div>
                 <Navbar />
                 <div className="component">
-                    <h1>About Me</h1>
+                    <h1>About</h1>
                     {this.state.view}
                 </div>
             </div>
