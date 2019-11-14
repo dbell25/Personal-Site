@@ -1,0 +1,28 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Caveat', cursive;
+    height: 150px;
+    width: 100%;
+    font-size: 32pt;
+    background-color:#222629;
+    color: white;
+}
+.subheading{
+    font-size: 18pt;
+}
+.navbar {
+    background-color: #61892F;
+    margin-bottom: 20px;
+}
+.navbar-brand{
+    display: flex;
+    flex-direction: column;
+}
+.nav-link {
+    background-color: transparent;
+    border: none;
+    color: white !important;
+}

@@ -1,0 +1,23 @@
+.component{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.input-fields, .btn{
+    align-self: center;
+}
+
+.input-fields{
+    width: 80%;
+    max-width: 350px;
+
+}
+.btn{
+    width: 175px;
+    background-color: #222629;
+    color: white;
+}
+.btn:hover{
+    background-color: #6B6E70 !important;
+}
