@@ -30,7 +30,7 @@ class authService {
     /**
      * Calls the API and registers a new user object in the database.
      */
-    register(firstName, lastName, email, password, confirmPassword, accessLevel) {
+    register(firstName, lastName, email, password, confirmPassword, accesslevel) {
         return new Promise((resolve, reject) => {
             const options = {
                 method: 'POST',
@@ -40,13 +40,10 @@ class authService {
                 body: {
                     firstName: firstName,
                     lastName: lastName,
-                    userName: userName,
                     email: email,
-                    backupEmail: backupEmail,
-                    phone: phone,
                     password: password,
                     confirmPassword: confirmPassword,
-                    accessLevel: accessLevel
+                    accesslevel: accesslevel
                 }
             }
             request(options, (err, response) => {
