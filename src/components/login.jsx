@@ -21,7 +21,7 @@ export default class Login extends Component {
             email: '',
             password: '',
             redirect: false,
-            loginRedirectPath: ''
+            redirectPath: ''
         }
     }
     /**
@@ -46,7 +46,7 @@ export default class Login extends Component {
                         }
                         // updates the user view
                         this.setState({
-                            loginRedirectPath: path,
+                            redirectPath: path,
                             redirect: true
                         });
                     }
@@ -68,7 +68,7 @@ export default class Login extends Component {
     handleSwitch = () => {
         this.setState({
             redirect: true,
-            loginRedirectPath: '/register'
+            redirectPath: '/register'
         });
     }
 
@@ -77,7 +77,7 @@ export default class Login extends Component {
             <div>
                 <Navbar />
                 <div className="component">
-                    {(this.state.loginRedirectPath !== '') ? <Redirect to='/' /> : null}
+                    {(this.state.redirectPath !== '') ? <Redirect to='/' /> : null}
                     <StatusMessages ref={this.statusMessages}></StatusMessages>
                     <h2>User Login</h2>
                     <p>Please enter your credentials below.</p>
@@ -108,13 +108,7 @@ export default class Login extends Component {
                         <p>Need an account? Click <button className="redirect" onClick={() => { this.handleSwitch() }}>here</button>!</p>
                     </div>
                     <button className="btn" onClick={this.handleSignIn}>Sign In</button>
-                    {(this.state.redirect) ? <Redirect to={{
-                        pathname: this.state.loginRedirectPath,
-                        state: {
-                            access: this.userAccess,
-                            email: this.state.email
-                        }
-                    }} /> : null}
+                    {(this.state.redirect) ? <Redirect to={{ pathname: this.state.redirectPath, state: { access: this.userAccess, email: this.state.email }}} /> : null}
                 </div>
             </div>
         );
