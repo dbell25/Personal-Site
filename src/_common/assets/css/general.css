@@ -10,5 +10,7 @@
 .input-fields{
     width: 80%;
     max-width: 350px;
-
+}
+.login-fields{
+    width: 100%;
 }

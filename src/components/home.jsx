@@ -3,7 +3,7 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react'
-import Navbar from './navbar';
+import NavPublic from './navpublic';
 
 export default class About extends Component {
     constructor(props) {
@@ -16,7 +16,7 @@ export default class About extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NavPublic />
                 <div className="component">
                     <h1>Home</h1>
                     {this.state.view}

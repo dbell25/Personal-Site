@@ -22,8 +22,11 @@
 .btn-modal{
     width: 125px;
 }
+.btn:hover{
+    background-color: #6B6E70;
+}
 .redirect{
-    background: none!important;
+    background: none !important;
     border: none;
     padding: 0!important;
     color: #069;
@@ -42,4 +45,12 @@
     background-color: transparent;
     border: none;
     color: white !important;
+}
+.dropdown-item{
+    margin-bottom: 5px;
+}
+.dropdown-item:hover {
+    background-color: #DCDCDC;
+    background-image: none;
+    color: black; 
 }

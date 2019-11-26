@@ -3,7 +3,7 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react'
-import NavAdmin from './navadmin';
+import NavAdmin from './admin/navadmin';
 
 export default class Admin extends Component {
     constructor(props) {

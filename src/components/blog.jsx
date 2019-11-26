@@ -3,7 +3,7 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react'
-import Navbar from './navbar';
+import NavPublic from './navpublic';
 
 export default class Blog extends Component {
     constructor(props) {
@@ -12,11 +12,11 @@ export default class Blog extends Component {
             view: <p>Nothing to Display Yet</p>
         }
     }
-    
+
     render() {
         return (
             <div>
-                <Navbar />
+                <NavPublic />
                 <div className="component">
                     <h1>Blog</h1>
                     {this.state.view}

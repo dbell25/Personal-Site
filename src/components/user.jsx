@@ -3,7 +3,7 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react'
-import Navbar from './navbar';
+import NavPublic from './navpublic';
 
 export default class User extends Component {
     constructor(props) {
@@ -20,7 +20,7 @@ export default class User extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NavPublic />
                 <div className="component">
                     <h1>User Dash</h1>
                     {this.state.view}

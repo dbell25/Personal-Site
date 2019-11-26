@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import StatusMessages from '../_common/components/status-messages/status-messages';
 import { Redirect } from 'react-router-dom';
-import Navbar from './navbar';
+import NavPublic from './navpublic';
 import authService from '../_common/services/auth';
 import '../_common/assets/css/navigation.css';
 
@@ -42,7 +42,7 @@ export default class Register extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NavPublic />
                 <div className="component">
                     {(this.state.redirect) ? <Redirect to='/login' /> : null}
                     <StatusMessages ref={this.statusMessages}></StatusMessages>
@@ -108,8 +108,7 @@ export default class Register extends Component {
                                 onChange={(e) => this.setState({ confirmPassword: e.target.value })} />
                         </div>
                     </div>
-                    <p>Already have an account? Click <button className="redirect" onClick={() => { this.setState({ redirect: true }) }}>here</button>!</p>
-                    <button type="button" className="btn" onClick={() => this.handleRegister()}>Register</button>
+                    <button type="button" className="btn btn-primary" onClick={() => this.handleRegister()}>Register</button>
                 </div>
             </div>
         )

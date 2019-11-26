@@ -1,12 +1,12 @@
 /**
- * @fileoverview Displays the central navigation bar.
+ * @fileoverview Displays the administrator navigation bar.
  * @author Daniel Bell
  */
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
-import authService from '../_common/services/auth';
-import '../_common/assets/css/navigation.css';
+import authService from '../../_common/services/auth';
+import '../../_common/assets/css/navigation.css';
 
 export default class NavAdmin extends Component {
     constructor(props) {
@@ -27,21 +27,31 @@ export default class NavAdmin extends Component {
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark">
-                    {(!this.state.loggedIn) ? <Redirect to='/login' /> : null}
-                    <a className="navbar-brand" href="/"><HomeIcon /></a>
+                    {(!this.state.loggedIn) ? <Redirect to='/' /> : null}
+                    <a className="navbar-brand" href="/admin"><HomeIcon /></a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link" href="/projects">Edit Projects</a>
+                            <li className="nav-item dropdown">
+                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</button>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a className="dropdown-item" href="/project-new">New Project</a>
+                                    <a className="dropdown-item" href="/project-edit">Edit Project</a>
+                                    <a className="dropdown-item" href="/project-view">View All</a>
+                                </div>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</button>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a className="dropdown-item" href="/post-new">New Post</a>
+                                    <a className="dropdown-item" href="/post-edit">Edit Post</a>
+                                    <a className="dropdown-item" href="/post-view">View All</a>
+                                </div>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/blog">Edit Blog</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/about">Edit About</a>
+                                <a className="nav-link" href="/edit-about">Edit About</a>
                             </li>
                         </ul>
                         <ul className="navbar-nav ml-auto">

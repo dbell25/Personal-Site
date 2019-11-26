@@ -1,11 +1,12 @@
 /**
- * @fileoverview Displays about me tab.
+ * @fileoverview Displays home tab.
  * @author Daniel Bell
  */
-import React, { Component } from 'react'
-import NavPublic from './navpublic';
+import React, { Component } from 'react';
+import NavAdmin from './navadmin';
+import '../../_common/assets/css/general.css';
 
-export default class About extends Component {
+export default class EditProjects extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -16,9 +17,9 @@ export default class About extends Component {
     render() {
         return (
             <div>
-                <NavPublic />
+                <NavAdmin />
                 <div className="component">
-                    <h1>About</h1>
+                    <h1>Edit Projects</h1>
                     {this.state.view}
                 </div>
             </div>
