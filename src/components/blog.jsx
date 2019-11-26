@@ -1,5 +1,5 @@
 /**
- * @fileoverview Displays blog tab.
+ * @fileoverview Displays the public blog tab.
  * @author Daniel Bell
  */
 import React, { Component } from 'react'

@@ -19,7 +19,7 @@ export default class ProjectView extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h2>New Post</h2>
+                    <h2>View All Projects</h2>
                     {this.state.view}
                 </div>
             </div>

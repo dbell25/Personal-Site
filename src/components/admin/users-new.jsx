@@ -34,7 +34,8 @@ export default class UsersNew extends Component {
                 else
                     this.statusMessages.current.showError(response.body.message);
             })
-            .catch(() => {
+            .catch((err) => {
+                console.log(err);
                 this.statusMessages.current.showError('Something went wrong. Please try again.');
             });
     }

@@ -3,7 +3,7 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import authService from '../_common/services/auth';
 import '../_common/assets/css/navigation.css';
@@ -76,20 +76,20 @@ export default class NavPublic extends Component {
             <div>
                 {(this.state.redirectPath !== '') ? <Redirect to={this.state.redirectPath} /> : null}
                 <nav className="navbar navbar-expand-lg navbar-dark">
-                    <a className="navbar-brand" href="/"><HomeIcon /></a>
+                    <Link to="/" className="navbar-brand"><HomeIcon /></Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" href="/projects">Projects</a>
+                                <Link to="/projects" className="nav-link">Projects</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/blog">Blog</a>
+                                <Link to="/blog" className="nav-link">Blog</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/about">About</a>
+                                <Link to="/about" className="nav-link">About</Link>
                             </li>
                         </ul>
                         <ul className="navbar-nav ml-auto">

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Displays home tab.
+ * @fileoverview Displays the about tab.
  * @author Daniel Bell
  */
 import React, { Component } from 'react'

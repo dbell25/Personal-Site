@@ -38,7 +38,7 @@ export default class UsersView extends Component {
             .then(() => {
                 this.componentDidMount();
             })
-            .catch(() => console.log("User Removal Error"));
+            .catch((err) => console.log(err));
         }
         else alert("Could Not Remove User");
     }

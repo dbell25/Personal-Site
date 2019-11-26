@@ -1,5 +1,5 @@
 /**
- * @fileoverview Displays admin dashboard.
+ * @fileoverview Displays the admin dashboard.
  * @author Daniel Bell
  */
 import React, { Component } from 'react'

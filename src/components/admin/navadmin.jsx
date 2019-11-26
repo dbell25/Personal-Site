@@ -3,7 +3,7 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import authService from '../../_common/services/auth';
 import '../../_common/assets/css/navigation.css';
@@ -28,37 +28,36 @@ export default class NavAdmin extends Component {
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark">
                     {(!this.state.loggedIn) ? <Redirect to='/' /> : null}
-                    <a className="navbar-brand" href="/admin"><HomeIcon /></a>
+                    <Link to="/admin" className="navbar-brand" ><HomeIcon /></Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li className="nav-item dropdown">
-                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</button>
+                            <li className="nav-item dropdown">
+                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create</button>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item" href="/users-new">New User</a>
-                                    <a className="dropdown-item" href="/users-view">View All</a>
+                                    <Link to="/users-new" className="dropdown-item" >New User</Link>
+                                    <Link to="/project-new" className="dropdown-item" >New Project</Link>
+                                    <Link to="/post-new" className="dropdown-item" >New Post</Link>
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
-                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</button>
+                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit</button>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item" href="/project-new">New Project</a>
-                                    <a className="dropdown-item" href="/project-edit">Edit Project</a>
-                                    <a className="dropdown-item" href="/project-view">View All</a>
+                                    <Link to="/edit-home" className="dropdown-item" >Edit Home</Link>
+                                    <Link to="/edit-about" className="dropdown-item" >Edit About</Link>
+                                    <Link to="/project-edit" className="dropdown-item" >Edit Project</Link>
+                                    <Link to="/post-edit" className="dropdown-item" >Edit Post</Link>
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
-                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</button>
+                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View</button>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item" href="/post-new">New Post</a>
-                                    <a className="dropdown-item" href="/post-edit">Edit Post</a>
-                                    <a className="dropdown-item" href="/post-view">View All</a>
+                                    <Link to="/users-view" className="dropdown-item" >View Users</Link>
+                                    <Link to="/project-view" className="dropdown-item" >View Projects</Link>
+                                    <Link to="/post-view" className="dropdown-item" >View Posts</Link>
                                 </div>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/edit-about">Edit About</a>
                             </li>
                         </ul>
                         <ul className="navbar-nav ml-auto">
