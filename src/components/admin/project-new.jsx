@@ -19,7 +19,7 @@ export default class ProjectNew extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h1>New Project</h1>
+                    <h2>New Project</h2>
                     {this.state.view}
                 </div>
             </div>

@@ -73,6 +73,41 @@ class authService {
             });
         });
     }
+    /**
+     * Returns all active users as a JSON object.
+     */
+    getAllUsers() {
+        return new Promise((resolve, reject) => {
+            const options = {
+                method: 'GET',
+                url: `${this.controllerUrl}/all`,
+                headers: {},
+                json: true,
+            }
+            request(options, (err, response) => {
+                if (err || response.statusCode >= 500) return reject(err || response);
+                resolve(response);
+            });
+        });
+    }
+    /**
+     * Removes a specified user from the Users database table.
+     */
+    removeUser(UserID) {
+        return new Promise((resolve, reject) => {
+            const options = {
+                method: 'POST',
+                url: `${this.controllerUrl}/remove`,
+                headers: {},
+                json: true,
+                body: { UserID: UserID }
+            }
+            request(options, (err, response) => {
+                if (err || response.statusCode >= 500) return reject(err || response);
+                resolve(response);
+            });
+        });
+    }
 }
 
 export default new authService();

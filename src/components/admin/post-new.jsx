@@ -20,7 +20,7 @@ export default class PostNew extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h1>New Post</h1>
+                    <h2>New Post</h2>
                     {this.state.view}
                 </div>
             </div>

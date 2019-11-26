@@ -19,7 +19,7 @@ export default class PostView extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h1>View All Posts</h1>
+                    <h2>View All Posts</h2>
                     {this.state.view}
                 </div>
             </div>

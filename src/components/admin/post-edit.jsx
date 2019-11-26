@@ -19,7 +19,7 @@ export default class PostEdit extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h1>Edit Post</h1>
+                    <h2>Edit Post</h2>
                     {this.state.view}
                 </div>
             </div>

@@ -18,7 +18,7 @@ export default class EditAbout extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h1>Edit About</h1>
+                    <h2>Edit About</h2>
                     {this.state.view}
                 </div>
             </div>

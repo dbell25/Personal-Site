@@ -18,7 +18,7 @@ export default class Blog extends Component {
             <div>
                 <NavPublic />
                 <div className="component">
-                    <h1>Blog</h1>
+                    <h2>Blog</h2>
                     {this.state.view}
                 </div>
             </div>

@@ -22,7 +22,7 @@ export default class User extends Component {
             <div>
                 <NavPublic />
                 <div className="component">
-                    <h1>User Dash</h1>
+                    <h2>User Dash</h2>
                     {this.state.view}
                 </div>
             </div>

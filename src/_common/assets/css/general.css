@@ -3,14 +3,26 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .input-fields {
     align-self: center;
 }
 .input-fields{
-    width: 80%;
     max-width: 350px;
 }
 .login-fields{
     width: 100%;
+}
+.not-found{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 56pt;
+}
+#not-found-icon{
+    height: 150px;
+    width: auto;
+}
+#not-found-text{
+    margin-top: -20px;
 }

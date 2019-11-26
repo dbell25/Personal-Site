@@ -34,6 +34,13 @@ export default class NavAdmin extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li className="nav-item dropdown">
+                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</button>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a className="dropdown-item" href="/users-new">New User</a>
+                                    <a className="dropdown-item" href="/users-view">View All</a>
+                                </div>
+                            </li>
                             <li className="nav-item dropdown">
                                 <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</button>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

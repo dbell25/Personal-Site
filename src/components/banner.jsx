@@ -10,7 +10,7 @@ export default class Banner extends Component {
         return (
             <div>
                 <div className="banner">
-                    <h1>Daniel J. Bell</h1>
+                    <h2>Daniel J. Bell</h2>
                     <p className="subheading">Software, Photography, Etc.</p>
                 </div>
             </div>

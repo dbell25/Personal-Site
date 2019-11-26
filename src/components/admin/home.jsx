@@ -18,7 +18,7 @@ export default class EditHome extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h1>Edit Home</h1>
+                    <h2>Edit Home</h2>
                     {this.state.view}
                 </div>
             </div>

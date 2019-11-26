@@ -22,7 +22,7 @@ export default class Admin extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h1>Admin Dash</h1>
+                    <h2>Admin Dash</h2>
                     {this.state.view}
                 </div>
             </div>
