@@ -17,6 +17,10 @@ export default class Admin extends Component {
         }
     }
 
+    componentDidMount = () => {
+        console.log(this.currentUser);
+    }
+
     render() {
         return (
             <div>

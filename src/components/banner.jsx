@@ -11,7 +11,7 @@ export default class Banner extends Component {
             <div>
                 <div className="banner">
                     <h2>Daniel J. Bell</h2>
-                    <p className="subheading">Software, Photography, Etc.</p>
+                    <p className="subheading">Web Design Made Simple</p>
                 </div>
             </div>
         );

@@ -74,7 +74,7 @@ export default class NavPublic extends Component {
     render() {
         return (
             <div>
-                {(this.state.redirectPath !== '') ? <Redirect to={this.state.redirectPath} /> : null}
+                {(this.state.redirectPath !== '') ?<Redirect to={{ pathname: this.state.redirectPath, state: { access: this.userAccess, email: this.state.email }}} /> : null}
                 <nav className="navbar navbar-expand-lg navbar-dark">
                     <Link to="/" className="navbar-brand"><HomeIcon /></Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
