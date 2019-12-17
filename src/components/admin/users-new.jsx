@@ -3,6 +3,7 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import StatusMessages from '../../_common/components/status-messages/status-messages';
 import { Redirect } from 'react-router-dom';
 import NavAdmin from '../admin/navadmin';
@@ -49,7 +50,7 @@ export default class UsersNew extends Component {
                     <StatusMessages ref={this.statusMessages}></StatusMessages>
                     <h2>New User</h2>
                     <p><b>Please fill out the information below.</b></p>
-                    <div className="input-fields">
+                    <div className="register-fields">
                         <div className="input-group mb-3">
                             <input
                                 required
@@ -109,6 +110,7 @@ export default class UsersNew extends Component {
                                 onChange={(e) => this.setState({ confirmPassword: e.target.value })} />
                         </div>
                     </div>
+                    <p id="user-redirect">To view all users. Click <Link to="/users-view" className="hyperlink">Here</Link>!</p>
                     <button type="button" className="btn btn-primary" onClick={() => this.handleRegister()}>Register</button>
                 </div>
             </div>

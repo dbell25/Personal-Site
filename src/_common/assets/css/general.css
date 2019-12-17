@@ -5,19 +5,39 @@
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    font-family: 'Dosis', sans-serif;
 }
-.input-fields {
+.form-control{ 
+    font-size: 16pt;
+}
+.input-fields, .register-fields {
     align-self: center;
-}
-.input-fields{
-    max-width: 350px;
 }
 .login-fields{
     width: 100%;
 }
+.register-fields {
+    width: 100%;
+    max-width: 600px;
+}
+.slider {
+    margin-top: -20px;
+}
+.description {
+    margin: 0;
+}
 .not-found{
     font-family: 'Times New Roman', Times, serif;
     font-size: 56pt;
+}
+.hyperlink {
+    color: blue;
+    text-decoration: underline;
+}
+.lead {
+    text-align: justify;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 .btn-control{
     margin: 5px;
@@ -28,4 +48,8 @@
 }
 #not-found-text{
     margin-top: -20px;
+}
+#user-redirect {
+    font-size: 18px;
+    margin-bottom: 15px;
 }

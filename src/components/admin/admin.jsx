@@ -3,7 +3,7 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react'
-import NavAdmin from './admin/navadmin';
+import NavAdmin from './navadmin';
 
 export default class Admin extends Component {
     constructor(props) {
@@ -12,13 +12,8 @@ export default class Admin extends Component {
         this.currentUser = this.props.location.state;
         this.key = 0;
         this.state = {
-            view: <p>Nothing To Display Yet</p>,
             loggedIn: true
         }
-    }
-
-    componentDidMount = () => {
-        console.log(this.currentUser);
     }
 
     render() {
@@ -26,8 +21,10 @@ export default class Admin extends Component {
             <div>
                 <NavAdmin />
                 <div className="component">
-                    <h2>Admin Dash</h2>
-                    {this.state.view}
+                    <div className="jumbotron">
+                        <h1 className="display-4">Admin Dash</h1>
+                        <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    </div>
                 </div>
             </div>
         );

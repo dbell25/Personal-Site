@@ -4,20 +4,12 @@
  */
 import React, { Component } from 'react'
 import NavAdmin from './navadmin';
-import { Editor } from 'react-draft-wysiwyg';
-import { EditorState } from 'draft-js';
-
-import { convertToHTML } from 'draft-convert';
-import renderHTML from 'react-render-html';
-
 import { FilePond, registerPlugin } from 'react-filepond';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-
-import 'draft-js/dist/Draft.css'
-import '../../_common/assets/css/general.css';
-import 'filepond/dist/filepond.min.css';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import 'filepond/dist/filepond.min.css';
+import '../../_common/assets/css/general.css';
+
 /**
  * Registers plugins for FilePond
  */
@@ -30,47 +22,10 @@ export default class PostNew extends Component {
         this.state = {
             postTitle: '',
             postHeading: '',
+            postText: '',
             thumbnail: '',
-            images: [],
-            editorState: EditorState.createEmpty(),
-            inProgress: false,
-            showPost: ''
+            images: []
         }
-    }
-
-    onEditorStateChange = (editorState) => {
-        this.setState({ editorState: editorState });
-    };
-
-    /**
-     * Adds the newly constucted blog post to the database.
-     */
-    handlePublish = () => {
-        // creates the blog post
-        const post = {
-            title: this.state.postTitle,
-            heading: this.state.postHeading,
-            thumbnail: this.state.thumbnail,
-            content: convertToHTML(this.state.editorState.getCurrentContent()),
-            createdAt: new Date().valueOf()
-        }
-        // saves to db
-        this.exampleDB = post;
-        console.log(this.exampleDB);
-        this.setState({ inProgress: true });
-    }
-
-    /**
-     * TEST METHOD - shows the newly created blog post
-     */
-    handleShow = () => {
-        const post = this.exampleDB; // load form db
-        this.setState({
-            showPost:
-                <div className='article-container'>
-                    {renderHTML(post.content)}
-                </div>
-        });
     }
 
     render() {
@@ -107,22 +62,21 @@ export default class PostNew extends Component {
                                     this.setState({ thumbnail: files.map(files => files.file) });
                                 }} />
                         </div>
-                        <Editor
-                            toolbarClassName="toolbarClassName"
-                            wrapperClassName="wrapperClassName"
-                            editorClassName="editorClassName"
-                            editorState={this.state.editorState}
-                            onEditorStateChange={this.onEditorStateChange}
-                        />
+                        <div className="form-group">
+                            <textarea
+                                required
+                                className="form-control"
+                                placeholder="Project Description"
+                                id="exampleFormControlTextarea1"
+                                rows="3"
+                                value={this.state.postText || ''}
+                                onChange={(e) => this.setState({ postText: e.target.value })}
+                            />
+                        </div>
                     </form>
-                    <br />
                     <div className="btn-controls">
                         <button className="btn btn-secondary btn-control" onClick={() => this.handlePublish()}>Publish</button>
-                        <button className="btn btn-secondary btn-control" disabled={!this.state.inProgress} onClick={() => this.handleShow()}>Show Saved</button>
                     </div>
-                </div>
-                <div>
-                    {this.state.showPost}
                 </div>
             </div>
         );
