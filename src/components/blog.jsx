@@ -15,7 +15,7 @@ export default class Blog extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavPublic />
                 <div className="component">
                     <h2>Blog</h2>

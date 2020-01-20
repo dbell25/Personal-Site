@@ -15,7 +15,7 @@ export default class EditHome extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavAdmin />
                 <div className="component">
                     <h2>Edit Home</h2>

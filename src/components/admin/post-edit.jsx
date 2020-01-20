@@ -5,6 +5,7 @@
 import React, { Component } from 'react'
 import NavAdmin from './navadmin';
 import '../../_common/assets/css/general.css';
+import '../../_common/assets/css/editor.css';
 
 export default class PostEdit extends Component {
     constructor(props) {
@@ -16,7 +17,7 @@ export default class PostEdit extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavAdmin />
                 <div className="component">
                     <h2>Edit Post</h2>

@@ -8,7 +8,7 @@ import '../_common/assets/css/navigation.css';
 export default class Banner extends Component {
     render() {
         return (
-            <div>
+            <div className="main">
                 <div className="banner">
                     <h2>Daniel J. Bell</h2>
                     <p className="subheading">Web Design Made Simple</p>

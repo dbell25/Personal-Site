@@ -43,7 +43,7 @@ export default class UsersNew extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavAdmin />
                 <div className="component">
                     {(this.state.redirect) ? <Redirect to='/login' /> : null}

@@ -1,3 +1,4 @@
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -19,11 +20,11 @@
     background-color: #222629;
     color: white;
 }
+.btn:hover{
+    background-color: #6B6E70 !important;
+}
 .btn-modal{
     width: 125px;
-}
-.btn:hover{
-    background-color: #6B6E70;
 }
 .redirect{
     background: none !important;

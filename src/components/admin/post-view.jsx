@@ -16,7 +16,7 @@ export default class PostView extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavAdmin />
                 <div className="component">
                     <h2>View All Posts</h2>

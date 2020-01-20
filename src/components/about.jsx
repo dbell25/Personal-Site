@@ -15,7 +15,7 @@ export default class About extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavPublic />
                 <div className="component">
                     <h2>About</h2>

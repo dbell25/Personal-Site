@@ -11,7 +11,16 @@ class projectService {
     /**
      * Calls the API and registers a new user object in the database.
      */
-    createProject(firstName, lastName, email, password, confirmPassword, accesslevel) {
+    createProject(title, heading, url, text, images) {
+        // parses the image files into form data.
+        let files = [];
+        for(let i = 0; i < images.length; i++){
+            let img = new FormData();
+            img.append(`${title}-img-${i+1}`, images[i]);
+            files.push(img);
+        }
+
+        // makes the request to the API.
         return new Promise((resolve, reject) => {
             const options = {
                 method: 'POST',
@@ -19,12 +28,11 @@ class projectService {
                 headers: {},
                 json: true,
                 body: {
-                    firstName: firstName,
-                    lastName: lastName,
-                    email: email,
-                    password: password,
-                    confirmPassword: confirmPassword,
-                    accesslevel: accesslevel
+                    title: title,
+                    heading: heading,
+                    url: url,
+                    text: text,
+                    images: files
                 }
             }
             request(options, (err, response) => {

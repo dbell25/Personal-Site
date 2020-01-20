@@ -83,9 +83,9 @@ export default class UsersView extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavAdmin />
-                <div className="table-responsive" id="users">
+                <div className="table-responsive table table-light table-striped table-hover" id="users">
                     {this.state.view}
                 </div>
                 <div className="modal" id="confirmModal" tabIndex="-1" role="dialog">

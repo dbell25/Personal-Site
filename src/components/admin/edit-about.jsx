@@ -15,7 +15,7 @@ export default class EditAbout extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavAdmin />
                 <div className="component">
                     <h2>Edit About</h2>

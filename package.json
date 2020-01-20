@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "@material-ui/icons": "^4.5.1",
+    "aws-sdk": "^2.593.0",
     "core-js": "^3.4.2",
     "filepond": "^4.8.0",
     "filepond-plugin-image-preview": "^4.5.0",

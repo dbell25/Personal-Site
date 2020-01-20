@@ -9,7 +9,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import 'filepond/dist/filepond.min.css';
 import '../../_common/assets/css/general.css';
-
+import '../../_common/assets/css/editor.css';
 /**
  * Registers plugins for FilePond
  */
@@ -30,7 +30,7 @@ export default class PostNew extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavAdmin />
                 <div className="component">
                     <h2>Create Blog Post</h2>

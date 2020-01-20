@@ -25,7 +25,7 @@ export default class NavAdmin extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <nav className="navbar navbar-expand-lg navbar-dark">
                     {(!this.state.loggedIn) ? <Redirect to='/' /> : null}
                     <Link to="/admin" className="navbar-brand" ><HomeIcon /></Link>

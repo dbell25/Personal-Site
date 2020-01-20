@@ -16,7 +16,7 @@ export default class ProjectView extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <NavAdmin />
                 <div className="component">
                     <h2>View All Projects</h2>

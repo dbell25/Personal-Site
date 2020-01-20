@@ -3,35 +3,40 @@
  * @author Daniel Bell
  */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import NavPublic from './navpublic';
 import '../_common/assets/css/general.css';
+import '../_common/assets/css/home.css';
 
-export default class About extends Component {
+export default class Home extends Component {
+    constructor(props) {
+        super(props)
+        this.profile = require('../_common/assets/img/profile.jpeg');
+    }
+
     render() {
         return (
-            <div className="home">
+            <div className="main">
                 <NavPublic />
-                <div className="slider">
-                    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg" alt="First slide" />
-                            </div>
-                            <div className="carousel-item">
-                                <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg" alt="Second slide" />
-                            </div>
-                            <div className="carousel-item">
-                                <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg" alt="Third slide" />
+                <div className="home">
+                    <div className="jumbotron">
+                        <div className="heading">
+                            <img className="profile" src={this.profile} alt="404" />
+                            <div className="contact">
+                                <h2 className="job-title">Full Stack Web Developer</h2>
+                                <hr className="divide" />
+                                <ul className="contact-list">
+                                    <li className="contact-point"><b>Email</b>: djbell216@gmail.com</li>
+                                    <li className="contact-point"><b>Phone</b>: +1 (913) 212-8335</li>
+                                    <li className="contact-point"><b>Github</b>: <a href="https://github.com/dbell25" target="_blank" rel="noopener noreferrer">Click Here!</a></li>
+                                    <li className="contact-point"><b>LinkedIn</b>: <a href="https://www.linkedin.com/in/daniel-bell-479483141/" target="_blank" rel="noopener noreferrer">Click Here!</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <a className="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="sr-only">Previous</span>
-                        </a>
-                        <a className="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="sr-only">Next</span>
-                        </a>
+                        <hr className="divide" />
+                        <div className="gallery">
+                            <Link to="/about" className="btn btn-primary btn-lg" role="button">About Me</Link>
+                        </div>
                     </div>
                 </div>
             </div>
