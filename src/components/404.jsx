@@ -11,7 +11,7 @@ import '../_common/assets/css/general.css';
 export default class Missing extends Component {
     render() {
         return (
-            <div>
+            <div className="bad-url">
                 <NavPublic />
                 <div className="component">
                     <h2 className="not-found">Error 404<br /><ErrorIcon id="not-found-icon"/></h2>

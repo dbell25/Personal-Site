@@ -12,6 +12,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props)
         this.profile = require('../_common/assets/img/profile.jpeg');
+        this.resume = require('../_common/assets/doc/resume.pdf');
     }
 
     render() {
@@ -23,13 +24,14 @@ export default class Home extends Component {
                         <div className="heading">
                             <img className="profile" src={this.profile} alt="404" />
                             <div className="contact">
-                                <h2 className="job-title">Full Stack Web Developer</h2>
+                                <h2 className="job-title">Full Stack Developer</h2>
                                 <hr className="divide" />
                                 <ul className="contact-list">
                                     <li className="contact-point"><b>Email</b>: djbell216@gmail.com</li>
                                     <li className="contact-point"><b>Phone</b>: +1 (913) 212-8335</li>
                                     <li className="contact-point"><b>Github</b>: <a href="https://github.com/dbell25" target="_blank" rel="noopener noreferrer">Click Here!</a></li>
                                     <li className="contact-point"><b>LinkedIn</b>: <a href="https://www.linkedin.com/in/daniel-bell-479483141/" target="_blank" rel="noopener noreferrer">Click Here!</a></li>
+                                    <li className="contact-point"><b>Resume</b>: <a href={this.resume} target="_blank" rel="noopener noreferrer">Click Here!</a></li>
                                 </ul>
                             </div>
                         </div>

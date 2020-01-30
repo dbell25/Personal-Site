@@ -46,6 +46,9 @@ html{
 .btn-control{
     margin: 5px;
 }
+.bad-url{
+    background-color: #222629;
+}
 #not-found-icon{
     height: 150px;
     width: auto;

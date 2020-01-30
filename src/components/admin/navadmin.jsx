@@ -35,28 +35,19 @@ export default class NavAdmin extends Component {
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li className="nav-item dropdown">
-                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create</button>
+                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</button>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <Link to="/project-new" className="dropdown-item" >New Project</Link>
+                                    <Link to="/project-edit" className="dropdown-item" >Edit Project</Link>
+                                    <Link to="/project-view" className="dropdown-item" >View Projects</Link>
+                                </div>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</button>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <Link to="/users-new" className="dropdown-item" >New User</Link>
-                                    <Link to="/project-new" className="dropdown-item" >New Project</Link>
-                                    <Link to="/post-new" className="dropdown-item" >New Post</Link>
-                                </div>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit</button>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <Link to="/edit-home" className="dropdown-item" >Edit Home</Link>
-                                    <Link to="/edit-about" className="dropdown-item" >Edit About</Link>
-                                    <Link to="/project-edit" className="dropdown-item" >Edit Project</Link>
-                                    <Link to="/post-edit" className="dropdown-item" >Edit Post</Link>
-                                </div>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <button className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View</button>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <Link to="/users-view" className="dropdown-item" >View Users</Link>
-                                    <Link to="/project-view" className="dropdown-item" >View Projects</Link>
-                                    <Link to="/post-view" className="dropdown-item" >View Posts</Link>
+
                                 </div>
                             </li>
                         </ul>
@@ -67,7 +58,7 @@ export default class NavAdmin extends Component {
                         </ul>
                     </div>
                 </nav>
-
+                {/* Logout Modal */}
                 <div className="modal fade" id="logoutModal" tabIndex="-1" role="dialog">
                     <div className="modal-dialog modal-dialog-centered" role="document">
                         <div className="modal-content">
