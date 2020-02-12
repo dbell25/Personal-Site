@@ -1,0 +1,33 @@
+.contact-heading{
+    font-size: calc(2vw + 2vh);
+    margin: auto;
+    margin-bottom: 25px;
+    color: white;
+    font-family: 'Noto Serif JP', serif;
+    text-align: center;
+}
+.contact-brand{
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: fixed;
+}
+.contact-bar{
+    display: flex;
+    justify-content: center;
+}
+.contact-line{
+    color: white;
+}
+.contact-item{
+    font-size: calc(1.5vw + 1.5vh);
+}
+#contact-icon{
+    height:  calc(4.5vw + 4.5vh);
+    width: auto;
+    color: white;
+    margin: 15px;
+}

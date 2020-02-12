@@ -1,45 +1,35 @@
 /**
- * @fileoverview Displays the public home tab.
+ * @fileoverview Displays the home tab.
  * @author Daniel Bell
  */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import NavPublic from './navpublic';
-import '../_common/assets/css/general.css';
-import '../_common/assets/css/home.css';
+import '../assets/css/home.css';
+import '../assets/css/toolbar.css';
 
 export default class Home extends Component {
     constructor(props) {
         super(props)
-        this.profile = require('../_common/assets/img/profile.jpeg');
-        this.resume = require('../_common/assets/doc/resume.pdf');
+        this.resume = require('../assets/doc/resume.pdf');
     }
 
     render() {
         return (
-            <div className="main">
-                <NavPublic />
-                <div className="home">
-                    <div className="jumbotron">
-                        <div className="heading">
-                            <img className="profile" src={this.profile} alt="404" />
-                            <div className="contact">
-                                <h2 className="job-title">Full Stack Developer</h2>
-                                <hr className="divide" />
-                                <ul className="contact-list">
-                                    <li className="contact-point"><b>Email</b>: djbell216@gmail.com</li>
-                                    <li className="contact-point"><b>Phone</b>: +1 (913) 212-8335</li>
-                                    <li className="contact-point"><b>Github</b>: <a href="https://github.com/dbell25" target="_blank" rel="noopener noreferrer">Click Here!</a></li>
-                                    <li className="contact-point"><b>LinkedIn</b>: <a href="https://www.linkedin.com/in/daniel-bell-479483141/" target="_blank" rel="noopener noreferrer">Click Here!</a></li>
-                                    <li className="contact-point"><b>Resume</b>: <a href={this.resume} target="_blank" rel="noopener noreferrer">Click Here!</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <hr className="divide" />
-                        <div className="gallery">
-                            <Link to="/about" className="btn btn-primary btn-lg" role="button">About Me</Link>
-                        </div>
-                    </div>
+            <div>
+                <div className="toolbar">
+                    <ul className="toolbar-items">
+                        <Link to='/' className="toolbar-link">Home</Link>
+                        <Link to='/about' className="toolbar-link">About</Link>
+                        <a href={this.resume} className="toolbar-link" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <Link to='/contact' className="toolbar-link">Contact</Link>
+                    </ul>
+                </div>
+                <div className="home-brand">
+                    <h1 className="home-heading">Daniel J. Bell</h1>
+                    <h5 className="home-subheading">Web Developer & Full Stack Software Engineer</h5>
+                </div>
+                <div className="home-footer">
+                    Photo Location: Death Valley NP, USA
                 </div>
             </div>
         );

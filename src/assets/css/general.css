@@ -1,0 +1,27 @@
+.error-404{
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: fixed;
+    color: white;
+}
+.error-404-title{
+    font-size: calc(1.5vw + 1.5vh);
+}
+.error-404-text{
+    font-size: calc(1vw + 1vh);
+}
+.error-404-button{
+    width: calc(8vw + 8vh);
+    height: auto;
+}
+#error-404-icon{
+    height: calc(7vw + 7vh);
+    width: auto;
+}
+#error-404-text{
+    margin-top: -20px;
+}
