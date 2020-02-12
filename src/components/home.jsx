@@ -26,7 +26,7 @@ export default class Home extends Component {
                 </div>
                 <div className="home-brand">
                     <h1 className="home-heading">Daniel J. Bell</h1>
-                    <h5 className="home-subheading">Web Developer & Full Stack Software Engineer</h5>
+                    <h5 className="home-subheading">Web Designer & <br/>Full Stack Software Engineer</h5>
                 </div>
                 <div className="home-footer">
                     Photo Location: Death Valley NP, USA

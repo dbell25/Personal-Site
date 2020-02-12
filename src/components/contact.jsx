@@ -35,7 +35,7 @@ export default class Contact extends Component {
                         <a href="https://www.linkedin.com/in/daniel-bell-479483141/" target="_blank" rel="noopener noreferrer"><LinkedInIcon id="contact-icon" /></a>
                     </div>
                     <div className="contact-line">
-                        <h4 className="contact-item">Phone #: +1 (913)-212-8335</h4>
+                        <h4 className="contact-item">Phone: +1 (913)-212-8335</h4>
                         <h4 className="contact-item">Email: djbell216@gmail.com</h4>
                     </div>
                 </div>

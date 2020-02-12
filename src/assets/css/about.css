@@ -25,12 +25,12 @@
 .about-profile{
     vertical-align: middle;
     width: auto;
-    height: calc(12vw + 12vh);
+    height: calc(11vw + 11vh);
     border-radius: 50%;
 }
 .about-profile-text{
     margin-top: 25px;
     text-align: justify;
     color: white;
-    font-size: calc(1vw + 1vh);
+    font-size: calc(9px + 0.8vw);
 }

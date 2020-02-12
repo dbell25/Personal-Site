@@ -30,14 +30,14 @@ export default class About extends Component {
                     <div className="about-card">
                         <img className="about-profile" src={this.profile} alt='' />
                         <p className="about-profile-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque 
-                            ex a neque interdum, eget volutpat odio congue. Ut sed pellentesque ex. 
-                            Suspendisse sollicitudin vehicula rutrum. Nullam interdum ut elit et maximus. 
-                            Donec elementum ex mi, nec faucibus nisl blandit nec. Donec sapien nibh, molestie 
-                            nec dapibus a, efficitur vel mi. Cras varius nibh scelerisque risus imperdiet, et 
-                            ultricies eros finibus. In eleifend nulla a justo sagittis tempor. Donec ut erat 
-                            a ante blandit elementum et vitae magna. Nulla consequat justo eget mauris congue, 
-                            et sagittis ante placerat.
+                            I am a software developer, photographer, and avid outdoorsman from the Kansas City area.
+                            In May of 2019, I recieved my bachelors degree in Computer Science from Kansas State
+                            University. My educational background is primarily in creating C# based apps for Windows.
+                            That said, my best work is in creating custom, mobile-friendly websites from the ground up.
+                            For most things, I use React and HTML5 to create a clean and lightning fast user experience. 
+                            When building APIs and backend servers, I prefer JavaScript/NodeJS. I excel in using Linux environments 
+                            but Windows and Mac are no problem. Whether it be a simple homepage, or fully immersive online 
+                            experience, I'm here to help your company reach new heights. Sound interesting? I'm available to chat anytime.
                         </p>
                     </div>
                 </div>

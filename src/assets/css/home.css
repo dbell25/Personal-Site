@@ -27,7 +27,7 @@ html{
 }
 .home-subheading{
     margin: 5px;
-    font-size: calc(.75vw + .75vh);
+    font-size: calc(1vw + 1vh);
 }
 .home-footer{
     display: block;
